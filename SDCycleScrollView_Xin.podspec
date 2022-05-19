@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
 s.name         = "SDCycleScrollView_Xin"
-s.version      = "1.83"
-s.summary      = "简单易用的图片无限轮播器. 1.83版本更新内容：fix page control frame incorrect problem"
+s.version      = "1.84"
+s.summary      = "简单易用的图片无限轮播器. 1.84版本更新内容：fix page control frame incorrect problem"
 
 s.homepage     = "https://github.com/zungjam/SDCycleScrollView"
 
@@ -23,6 +23,6 @@ s.source_files  = "SDCycleScrollView/Lib/SDCycleScrollView/**/*.{h,m}"
 s.requires_arc = true
 
 
-s.dependency 'SDWebImage', '>= 5.0.0'
+s.dependency 'SDWebImage', '~> 5.0'
 
 end
