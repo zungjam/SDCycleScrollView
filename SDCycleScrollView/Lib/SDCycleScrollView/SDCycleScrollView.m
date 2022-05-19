@@ -538,7 +538,11 @@ NSString * const ID = @"SDCycleScrollViewCell";
     }
     
     self.pageControl.translatesAutoresizingMaskIntoConstraints = NO;
-    [[self.pageControl.centerXAnchor constraintEqualToAnchor:self.centerXAnchor] setActive:YES];
+    if (_pageControlAliment == SDCycleScrollViewPageContolAlimentRight) {
+        [[self.pageControl.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-_pageControlRightOffset] setActive:YES];
+    } else {
+        [[self.pageControl.centerXAnchor constraintEqualToAnchor:self.centerXAnchor] setActive:YES];
+    }
     [[self.pageControl.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-self.pageControlBottomOffset] setActive:YES];
     [[self.pageControl.widthAnchor constraintEqualToConstant:size.width] setActive:YES];
     [[self.pageControl.heightAnchor constraintEqualToConstant:self.pageControlDotSize.height] setActive:YES];
